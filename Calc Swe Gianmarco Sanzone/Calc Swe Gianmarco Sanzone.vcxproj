@@ -144,9 +144,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Mane.h" />
+    <ClInclude Include="Win.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Mane.cpp" />
+    <ClCompile Include="Win.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
