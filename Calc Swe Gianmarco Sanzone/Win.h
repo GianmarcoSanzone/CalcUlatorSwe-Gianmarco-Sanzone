@@ -25,6 +25,8 @@ public:
 	//text box
 
 	wxTextCtrl* txtbox = nullptr;
+	
+
 
 
 	//operators
@@ -34,11 +36,19 @@ public:
 	wxButton* subtract = nullptr;
 	wxButton* multiply = nullptr;
 	wxButton* divide = nullptr;
+	
 
 	//right hand side
 	wxButton* mod = nullptr;
 	wxButton* clear = nullptr;
 	wxButton* equals = nullptr;
 	wxButton* negative = nullptr;
+
+
+	//hex,dex,bin
+
+	wxButton* dec = nullptr;
+	wxButton* Hex = nullptr;
+	wxButton* Bin = nullptr;
 };
 

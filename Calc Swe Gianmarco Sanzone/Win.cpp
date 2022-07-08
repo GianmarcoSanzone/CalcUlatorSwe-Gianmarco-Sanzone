@@ -20,11 +20,14 @@ EVT_BUTTON(10015, Win::OnButtonClicked)
 EVT_BUTTON(10016, Win::OnButtonClicked)
 EVT_BUTTON(10017, Win::OnButtonClicked)
 EVT_BUTTON(10018, Win::OnButtonClicked)
+EVT_BUTTON(10019, Win::OnButtonClicked)
+EVT_BUTTON(10020, Win::OnButtonClicked)
+EVT_BUTTON(10021, Win::OnButtonClicked)
 
 
 wxEND_EVENT_TABLE()
 
-Win::Win() : wxFrame(nullptr, wxID_ANY, "TI-84 Calculator", wxPoint(200, 200), wxSize(555, 600))
+Win::Win() : wxFrame(nullptr, wxID_ANY, "TI-84 Calculator", wxPoint(200, 200), wxSize(555, 700))
 {
 	//numbers
 	button0 = new wxButton(this, 10000, "0", wxPoint(110, 110), wxSize(100, 100));
@@ -56,9 +59,19 @@ Win::Win() : wxFrame(nullptr, wxID_ANY, "TI-84 Calculator", wxPoint(200, 200), w
 
 	//Right hand
 	mod = new wxButton(this, 10015, "%", wxPoint(440, 110), wxSize(100, 100));
-	clear = new wxButton(this, 10016, "Clear", wxPoint(440, 220), wxSize(100, 100));
-	equals = new wxButton(this, 10017, "=", wxPoint(440, 330), wxSize(100, 100));
+	equals = new wxButton(this, 10017, "=", wxPoint(440, 220), wxSize(100, 100));
 	negative = new wxButton(this, 10018, "-x", wxPoint(330, 440), wxSize(100, 100));
+
+	//bottom
+	clear = new wxButton(this, 10016, "Clear", wxPoint(220, 550), wxSize(100, 100));
+	
+
+	//BIN HEX AND DEC
+
+	dec = new wxButton(this, 10019, "Dec", wxPoint(0, 440), wxSize(100, 100));
+	Hex = new wxButton(this, 10020, "HEX", wxPoint(440, 330), wxSize(100, 100));
+	Bin = new wxButton(this, 10021, "BIN", wxPoint(440, 440), wxSize(100, 100));
+
 
 }
 
@@ -158,6 +171,18 @@ void Win::OnButtonClicked(wxCommandEvent &event)
 		case 10018:
 
 			txtbox->AppendText("-");
+			break;
+
+		case 10019:
+			txtbox->AppendText(".");
+			break;
+
+		case 10020:
+			txtbox->AppendText("HEX");
+			break;
+
+		case 10021:
+			txtbox->AppendText("BIN");
 			break;
 	}
 
