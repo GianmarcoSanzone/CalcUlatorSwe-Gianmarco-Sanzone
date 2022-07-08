@@ -5,7 +5,9 @@ class Win : public wxFrame
 public:
 
 	Win();
+	void OnButtonClicked(wxCommandEvent &event);
 
+	wxDECLARE_EVENT_TABLE();
 public:
 	//numbers
 	wxButton* button0 = nullptr;
