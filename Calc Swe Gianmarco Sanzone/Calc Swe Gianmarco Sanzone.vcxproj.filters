@@ -21,12 +21,18 @@
     <ClInclude Include="Win.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Bfac.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Mane.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Win.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Bfac.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
