@@ -24,21 +24,22 @@ EVT_BUTTON(10017, Win::OnButtonClicked)
 EVT_BUTTON(10018, Win::OnButtonClicked)
 EVT_BUTTON(10019, Win::OnButtonClicked)
 EVT_BUTTON(10020, Win::OnButtonClicked)
-
-
 wxEND_EVENT_TABLE()
 
 Win::Win() : wxFrame(nullptr, wxID_ANY, "TI-84 Calculator", wxPoint(200, 200), wxSize(555, 700), wxDEFAULT_FRAME_STYLE & ~(wxRESIZE_BORDER | wxMAXIMIZE))
 {
 
+
 	Bfac f;
+
 	//text box
-	txtbox = new wxTextCtrl(this, 10000, "", wxPoint(0,5), wxSize(590,100));
+	txtbox = new wxTextCtrl(this, 10022, "", wxPoint(0,5), wxSize(590,100));
 	txtbox->Disable();
 
 	Win::SetMaxSize(wxSize(555, 700));
 
 	f.BM(this);
+
 
 
 }
