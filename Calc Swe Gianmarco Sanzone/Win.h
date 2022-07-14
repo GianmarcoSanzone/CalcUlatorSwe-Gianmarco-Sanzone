@@ -10,7 +10,7 @@ public:
 	wxDECLARE_EVENT_TABLE();
 public:
 	//numbers
-	wxButton* button0;
+	wxButton* button0 = nullptr;
 	wxButton* button1 = nullptr;
 	wxButton* button2 = nullptr;
 	wxButton* button3 = nullptr;
