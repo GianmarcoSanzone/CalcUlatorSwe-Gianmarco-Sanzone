@@ -88,12 +88,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Sanzo\OneDrive\Desktop\wxWidgets-3.1.7\include;C:\Users\Sanzo\OneDrive\Desktop\wxWidgets-3.1.7\include\msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Sanzo\OneDrive\Desktop\school\wxWidgets-3.1.7\include;C:\Users\Sanzo\OneDrive\Desktop\school\wxWidgets-3.1.7\include\msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Sanzo\OneDrive\Desktop\wxWidgets-3.1.7\lib\vc_lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Sanzo\OneDrive\Desktop\school\wxWidgets-3.1.7\lib\vc_lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -104,14 +104,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Sanzo\OneDrive\Desktop\wxWidgets-3.1.7\include;C:\Users\Sanzo\OneDrive\Desktop\wxWidgets-3.1.7\include\msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Sanzo\OneDrive\Desktop\school\wxWidgets-3.1.7\include;C:\Users\Sanzo\OneDrive\Desktop\school\wxWidgets-3.1.7\include\msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Sanzo\OneDrive\Desktop\wxWidgets-3.1.7\lib\vc_lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Sanzo\OneDrive\Desktop\school\wxWidgets-3.1.7\lib\vc_lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -144,11 +144,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Bfac.h" />
+    <ClInclude Include="CalculatorProcessor.h" />
     <ClInclude Include="Mane.h" />
     <ClInclude Include="Win.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bfac.cpp" />
+    <ClCompile Include="CalculatorProcessor.cpp" />
     <ClCompile Include="Mane.cpp" />
     <ClCompile Include="Win.cpp" />
   </ItemGroup>

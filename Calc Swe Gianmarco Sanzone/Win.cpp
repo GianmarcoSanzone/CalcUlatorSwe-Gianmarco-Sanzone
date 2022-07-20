@@ -1,6 +1,9 @@
 #include "Win.h"
 #include "wx/wx.h"
 #include "Bfac.h"
+#include "CalculatorProcessor.h"
+#include <vector>
+#include <string>
 
 wxBEGIN_EVENT_TABLE(Win, wxFrame)
 EVT_BUTTON(10000, Win::OnButtonClicked)
@@ -26,6 +29,9 @@ EVT_BUTTON(10019, Win::OnButtonClicked)
 EVT_BUTTON(10020, Win::OnButtonClicked)
 wxEND_EVENT_TABLE()
 
+
+
+
 Win::Win() : wxFrame(nullptr, wxID_ANY, "TI-84 Calculator", wxPoint(200, 200), wxSize(555, 700), wxDEFAULT_FRAME_STYLE & ~(wxRESIZE_BORDER | wxMAXIMIZE))
 {
 
@@ -33,7 +39,7 @@ Win::Win() : wxFrame(nullptr, wxID_ANY, "TI-84 Calculator", wxPoint(200, 200), w
 	Bfac f;
 
 	//text box
-	txtbox = new wxTextCtrl(this, 10022, "", wxPoint(0,5), wxSize(590,100));
+	txtbox = new wxTextCtrl(this, 10022, "", wxPoint(0, 5), wxSize(590, 100));
 	txtbox->Disable();
 
 	Win::SetMaxSize(wxSize(555, 700));
@@ -44,115 +50,135 @@ Win::Win() : wxFrame(nullptr, wxID_ANY, "TI-84 Calculator", wxPoint(200, 200), w
 
 }
 
-void Win::OnButtonClicked(wxCommandEvent &event)
+void Win::OnButtonClicked(wxCommandEvent& event)
 {
+	
 	//txtbox->SetLabel("clicked");
 
 	int ID = event.GetId();
 
 	switch (ID)
 	{
-		case 10000: 
+	case 10000:
 
-			txtbox->AppendText("0");
-			break;
+		txtbox->AppendText("0");
+		//C_inst->box(txtbox);
+		break;
 
-		case 10001:
+	case 10001:
 
-			txtbox->AppendText("1");
-			break;
+		txtbox->AppendText("1");
 
-		case 10002:
+		//C_inst->box(txtbox);
+		break;
 
-			txtbox->AppendText("2");
-			break;
+	case 10002:
 
-		case 10003:
+		txtbox->AppendText("2");
+		//C_inst->box(txtbox);
+		break;
 
-			txtbox->AppendText("3");
-			break;
+	case 10003:
 
-		case 10004:
+		txtbox->AppendText("3");
+		//C_inst->box(txtbox);
+		break;
 
-			txtbox->AppendText("4");
-			break;
+	case 10004:
 
-		case 10005:
+		txtbox->AppendText("4");
+		//C_inst->box(txtbox);
+		break;
 
-			txtbox->AppendText("5");
-			break;
+	case 10005:
 
-		case 10006:
+		txtbox->AppendText("5");
+		//C_inst->box(txtbox);
+		break;
 
-			txtbox->AppendText("6");
-			break;
+	case 10006:
 
-		case 10007:
+		txtbox->AppendText("6");
+		//C_inst->box(txtbox);
+		break;
 
-			txtbox->AppendText("7");
-			break;
+	case 10007:
 
-		case 10008:
+		txtbox->AppendText("7");
+		//C_inst->box(txtbox);
+		break;
 
-			txtbox->AppendText("8");
-			break;
+	case 10008:
 
-		case 10009:
+		txtbox->AppendText("8");
+		//C_inst->box(txtbox);
+		break;
 
-			txtbox->AppendText("9");
-			break;
+	case 10009:
 
-		case 10010:
+		txtbox->AppendText("9");
+		//C_inst->box(txtbox);
+		break;
 
-			txtbox->AppendText("+");
-			break;
+	case 10010:
 
-		case 10011:
+		txtbox->AppendText("+");
+		C_inst->a(txtbox);
+		break;
+		
+	case 10011:
 
-			txtbox->AppendText("-");
-			break;
+		txtbox->AppendText("-");
+		C_inst->min(txtbox);
+		break;
 
-		case 10012:
+	case 10012:
 
-			txtbox->AppendText("*");
-			break;
+		txtbox->AppendText("*");
+		C_inst->m(txtbox);
+		break;
 
-		case 10013:
+	case 10013:
 
-			txtbox->AppendText("/");
-			break;
+		txtbox->AppendText("/");
+		C_inst->d(txtbox);
+		break;
 
-		case 10014:
+	case 10014:
 
-			txtbox->AppendText("%");
-			break;
+		txtbox->AppendText("%");
+		C_inst->moad(txtbox);
+		break;
 
-		case 10015:
+	case 10015:
 
-			txtbox->Clear();
-			break;
+		txtbox->Clear();
+		C_inst->cl(txtbox);
+		break;
 
-		case 10016:
+	case 10016:
 
-			txtbox->AppendText("EQUALS: ");
-			break;
+		txtbox->AppendText("=");
+		C_inst->eq(txtbox);
+		break;
 
-		case 10017:
+	case 10017:
 
-			txtbox->AppendText("-");
-			break;
+		txtbox->AppendText("-");
+		break;
 
-		case 10018:
-			txtbox->AppendText(".");
-			break;
+	case 10018:
+		txtbox->AppendText(".");
+		break;
 
-		case 10019:
-			txtbox->AppendText("HEX");
-			break;
+	case 10019:
+		txtbox->SetValue(C_inst->ToHexDecimalString(txtbox));
+		break;
 
-		case 10020:
-			txtbox->AppendText("BIN");
-			break;
+	case 10020:
+		//txtbox->AppendText("BIN");
+		C_inst->ToBinaryString(txtbox);
+		break;
 	}
 
 	event.Skip();

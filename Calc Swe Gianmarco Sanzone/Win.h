@@ -1,9 +1,10 @@
 #pragma once
 #include "wx/wx.h"
+#include "CalculatorProcessor.h"
 class Win : public wxFrame
 {
 public:
-
+	CalculatorProcessor* C_inst = C_inst->GetInstance();
 	Win();
 	void OnButtonClicked(wxCommandEvent &event);
 

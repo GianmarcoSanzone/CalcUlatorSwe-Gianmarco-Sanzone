@@ -11,7 +11,8 @@ public:
 
 	void butfunction(wxWindow* plus);
 	void numbers(wxWindow* nub);
-
+	/*void OnButtonClick(wxCommandEvent& event);
+	void BF(wxWindow* bum);*/
 
 public:
 	//wxButton* add = nullptr;

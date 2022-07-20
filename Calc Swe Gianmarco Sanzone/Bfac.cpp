@@ -80,16 +80,16 @@ void Bfac::BM(wxWindow* tun)
 	numbers(tun);
 
 }
+
+//void Bfac::BF(wxWindow* bum)
 //{
-//	wxButton* but;
+//	wxButton** but = nullptr;
 //
-//	for (int i = 0; i < 22; i++)
-//	{
-//		//(* but)->Bind(wxEVT_COMMAND_BUTTON_CLICKED, &Bfac::OnButtonClick, this);
-//		but = new wxButton(/*this, 10001, "0", wxPoint(110, 110), wxSize(100, 100)*/);
-//	}
+//	
+//	
+//		(*but)->Bind(wxEVT_COMMAND_BUTTON_CLICKED, &Bfac::OnButtonClick, this);
+//		//but = new wxButton(/*this, 10001, "0", wxPoint(110, 110), wxSize(100, 100)*/);
 //
-//	return but;
 //} //OG Button Factory
 
 
